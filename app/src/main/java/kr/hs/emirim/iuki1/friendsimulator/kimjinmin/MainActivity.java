@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate 메소드 호출");
         setContentView(R.layout.activity_main);
-        mImageViewFriendVisual = (imageView) findViewById(R.id.friend_visual);
+        mImageViewFriendVisual = (ImageView) findViewById(R.id.friend_visual);
         Log.d(TAG, "activity_main 레이아웃 세팅");
     }
 
@@ -26,14 +26,19 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "클릭된 뷰");
         switch (view.getId()){
             case R.id.button1:
+                mImageViewFriendVisual.setImageResource(R.drawable.jm_01);
                 Toast.makeText(this,"미쳤나봐", Toast.LENGTH_SHORT).show(); break;
             case R.id.button2:
+                mImageViewFriendVisual.setImageResource(R.drawable.jm_02);
                 Toast.makeText(this,"음⊙_⊙", Toast.LENGTH_SHORT).show();break;
             case R.id.button3:
+                mImageViewFriendVisual.setImageResource(R.drawable.jm_03);
                 Toast.makeText(this,"엥", Toast.LENGTH_SHORT).show();break;
             case R.id.button4:
+                mImageViewFriendVisual.setImageResource(R.drawable.jm_04);
                 Toast.makeText(this,"미아넹", Toast.LENGTH_SHORT).show();break;
             case R.id.button5:
+                mImageViewFriendVisual.setImageResource(R.drawable.jm_05);
                 Toast.makeText(this,"으흠", Toast.LENGTH_SHORT).show();break;
             default: Toast.makeText(this,"다시선택해", Toast.LENGTH_SHORT).show();
         }
